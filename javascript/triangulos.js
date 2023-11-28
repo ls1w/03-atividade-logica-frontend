@@ -48,14 +48,14 @@ function testarNumeros() {
 function definirTriangulo() {
     if (numero1.value == numero2.value && numero1.value == numero3.value && numero2.value == numero3.value) {
         resultado.innerHTML = 'É UM TRIÂNGULO EQUILÁTERO!';
-        imgTriangulo.setAttribute('src','../img/triangulo-equilatero.webp')
+        imgTriangulo.setAttribute('src','./img/triangulo-equilatero.webp')
 
     } else if (numero1.value == numero2.value || numero1.value == numero3.value || numero2.value == numero3.value) {
         resultado.innerHTML = 'É UM TRIÂNGULO ISÓSCELES!';
-        imgTriangulo.setAttribute('src','../img/triangulo-isosceles.webp')
+        imgTriangulo.setAttribute('src','./img/triangulo-isosceles.webp')
 
     } else {
         resultado.innerHTML ='É UM TRIÂNGULO ESCALENO!';
-        imgTriangulo.setAttribute('src','../img/triangulo-escaleno.webp')
+        imgTriangulo.setAttribute('src','./img/triangulo-escaleno.webp')
     }
 }
