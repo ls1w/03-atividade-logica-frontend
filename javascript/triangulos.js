@@ -46,7 +46,7 @@ function testarNumeros() {
 
 // FUNÇÃO DEFINIR O NOME DO TRIANGULO
 function definirTriangulo() {
-    if (numero1.value == numero2.value && numero1.value == numero3.value && numero2.value == numero3.value) {
+    if (numero1.value == numero2.value && numero1.value == numero3.value) {
         resultado.innerHTML = 'É UM TRIÂNGULO EQUILÁTERO!';
         imgTriangulo.setAttribute('src','./img/triangulo-equilatero.webp')
 
