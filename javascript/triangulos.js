@@ -1,20 +1,19 @@
 'use strict'
 
-const numero1 = document.getElementById('numero1');
-const numero2 = document.getElementById('numero2');
-const numero3 = document.getElementById('numero3');
+const ladoA = document.getElementById('ladoA');
+const ladoB = document.getElementById('ladoB');
+const ladoC = document.getElementById('ladoC');
 const resultado = document.getElementById('resultado');
 
 function limpar() {
-    numero1.value = '';
-    numero2.value = '';
-    numero3.value = '';
+    ladoA.value = '';
+    ladoB.value = '';
+    ladoC.value = '';
     imgTriangulo.setAttribute('src','');
     resultado.innerHTML = '-';
 }
 
 function verificar() {
-
     if (!(testarNumeros())) {
         // AÇÃO SE NÃO FOREM DIGITADOS NÚMEROS VÁLIDOS
         alert('Digite valores inteiros maiores que 0');
@@ -27,16 +26,16 @@ function verificar() {
 
 // FUNÇÃO DE TEST SE NÃO SÃO VAZIOS OU MENOR QUE ZERO
 function testarNumeros() {
-    if (numero1.value <= 0) {
-        numero1.focus();
+    if (ladoA.value <= 0) {
+        ladoA.focus();
         return false;
 
-    } else if (numero2.value <= 0) {
-        numero2.focus();
+    } else if (ladoB.value <= 0) {
+        ladoB.focus();
         return false;
 
-    } else if (numero3.value <= 0) {
-        numero3.focus();
+    } else if (ladoC.value <= 0) {
+        ladoC.focus();
         return false;
 
     } else {
@@ -46,11 +45,11 @@ function testarNumeros() {
 
 // FUNÇÃO DEFINIR O NOME DO TRIANGULO
 function definirTriangulo() {
-    if (numero1.value == numero2.value && numero1.value == numero3.value) {
+    if (ladoA.value == ladoB.value && ladoA.value == ladoC.value) {
         resultado.innerHTML = 'É UM TRIÂNGULO EQUILÁTERO!';
         imgTriangulo.setAttribute('src','./img/triangulo-equilatero.webp');
 
-    } else if (numero1.value == numero2.value || numero1.value == numero3.value || numero2.value == numero3.value) {
+    } else if (ladoA.value == ladoB.value || ladoA.value == ladoC.value || ladoB.value == ladoC.value) {
         resultado.innerHTML = 'É UM TRIÂNGULO ISÓSCELES!';
         imgTriangulo.setAttribute('src','./img/triangulo-isosceles.webp');
 
